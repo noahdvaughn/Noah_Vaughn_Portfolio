@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import React from 'react'
-import { MainBody } from './styles/Global.styled'
+import { ThemeProvider } from 'styled-components'
+import {Theme} from './utils/Theme'
+import { Container, MainBody } from './styles/Global.styled'
 
 
 
@@ -8,9 +10,13 @@ function App() {
   
 
   return (
-    <div className="App">
-      <MainBody/>
-    </div>
+    <ThemeProvider theme={Theme}>
+      <MainBody>
+        <Container>
+          
+        </Container>
+      </MainBody>
+    </ThemeProvider>
   )
 }
 
