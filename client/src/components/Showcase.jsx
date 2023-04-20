@@ -55,6 +55,24 @@ const Showcase = () => {
             <ShowcaseImageCard>
               <img src={profilePic}/>
             </ShowcaseImageCard>
+            <Particle
+            src={BackgroundImg}
+            top='-80px'
+            left='20px'
+            rotate='60deg'
+            />
+            <Particle
+            src={BackgroundImg}
+            top='50px'
+            right='-70px'
+            rotate='0deg'
+            />
+            <Particle
+            src={BackgroundImg}
+            bottom='10px'
+            left='-70px'
+            rotate='50deg'
+            />
           </ShowcaseParticleContainer>
 
         </FlexContainer>
