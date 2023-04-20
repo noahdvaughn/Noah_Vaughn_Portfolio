@@ -18,12 +18,12 @@ export const PaddingContainer = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   justify-content: ${({ justify }) => justify};
-  align-items: ${({ align }) => align}
-  gap: ${({ gap }) => gap}
+  align-items: ${({ align }) => align};
+  gap: ${({ gap }) => gap};
   flex-direction: ${({ direction }) => direction};
 
-  & > div{
-    flex: ${({ fullWidthChild }) => fullWidthChild && 1}
+  & > div {
+    flex: ${({ fullWidthChild }) => fullWidthChild && 1};
   }
 `
 export const Heading = styled(PaddingContainer)`
@@ -51,7 +51,7 @@ export const ParaText = styled(PaddingContainer)`
   color: ${({ theme }) => theme.colors.para_text_color};
 `
 export const IconContainer = styled.div`
-  font-size: ${({ size }) => size}
+  font-size: ${({ size }) => size};
   cursor: pointer;
   color: ${({ color, theme }) => {
     switch (color) {
@@ -62,5 +62,5 @@ export const IconContainer = styled.div`
       default:
         return
     }
-  }}
+  }};
 `

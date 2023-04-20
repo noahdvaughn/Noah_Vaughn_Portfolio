@@ -1,4 +1,6 @@
 import React from 'react'
+import profilePic from '../assets/pfp2.png'
+import BackgroundImg from '../assets/particle.png'
 
 import {
   PaddingContainer,
@@ -8,6 +10,9 @@ import {
   BlueText,
   IconContainer
 } from '../styles/Global.styled'
+import { ShowcaseParticleContainer, ShowcaseImageCard, Particle } from '../styles/Showcase.styled'
+
+import {BsLinkedin, BsGithub} from "react-icons/bs"
 
 const Showcase = () => {
   return (
@@ -27,10 +32,33 @@ const Showcase = () => {
           <Heading size='h3'>
             I'm a <BlueText>Fullstack Developer </BlueText>
           </Heading>
-          <ParaText>
-            Hello, my name is Noah Vaughn and I am a fullstack developer with 
+          <ParaText as='p' top='2rem' bottom='4rem'>
+         Hello, my name is Noah Vaughn and I'm a fullstack developer who creates intuitive solutions to modern problems.
           </ParaText>
+
+          <FlexContainer gap='20px'>
+
+            <IconContainer color='blue' size ='1.5rem'>
+              <BsLinkedin/>
+            </IconContainer>
+
+            <IconContainer color='blue' size ='1.5rem'>
+              <BsGithub/>
+            </IconContainer>
+
+          </FlexContainer>
         </div>
+
+
+        <FlexContainer justify='flex-end'>
+          <ShowcaseParticleContainer>
+            <ShowcaseImageCard>
+              <img src={profilePic}/>
+            </ShowcaseImageCard>
+          </ShowcaseParticleContainer>
+
+        </FlexContainer>
+
       </FlexContainer>
     </PaddingContainer>
   )

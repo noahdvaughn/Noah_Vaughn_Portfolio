@@ -8,5 +8,10 @@ html{
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
+img{
+  max-width: 20rem;
+  border-radius: 1rem;
+  margin: 0;
+  padding: 0;
+}
 
