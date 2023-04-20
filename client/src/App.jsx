@@ -1,8 +1,9 @@
-import { useState } from 'react'
+
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import {Theme} from './utils/Theme'
+import { Theme } from './utils/Theme'
 import { Container, MainBody } from './styles/Global.styled'
+import Showcase from './components/Showcase'
 
 
 
@@ -13,7 +14,7 @@ function App() {
     <ThemeProvider theme={Theme}>
       <MainBody>
         <Container>
-          
+          <Showcase />
         </Container>
       </MainBody>
     </ThemeProvider>
