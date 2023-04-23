@@ -7,6 +7,9 @@ import {
 } from '../styles/Global.styled'
 import project1 from '../assets/SakugaConnectorThumbnail.png'
 import project2 from '../assets/TurnTablesThumbnail.png'
+import Project from './layouts/Project'
+
+
 
 
 const projectDetails = [
@@ -17,7 +20,7 @@ const projectDetails = [
     project_desc: "Anime discussion and recommendation platform",
     tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
     project_img: {project1},
-    project_url: '',
+    project_url: 'https://sakugaconnector.surge.sh/',
     reverse: false
 
   },
@@ -27,7 +30,7 @@ const projectDetails = [
     project_desc: "Music Review and tracking app",
     tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
     project_img: {project1},
-    project_url: '',
+    project_url: 'https://github.com/jonclindner/TurnTables',
     reverse: false
 
   },
@@ -43,6 +46,12 @@ const MyProjects = () => {
     <Heading as='h2' size='h2'>
       What <BlueText>I have built</BlueText>
     </Heading>
+
+    {projectDetails.map((project)=>(
+      <PaddingContainer top='5rem' bottom='5rem'>
+        <Project />
+      </PaddingContainer>
+    ))}
 
   </PaddingContainer>
 }
