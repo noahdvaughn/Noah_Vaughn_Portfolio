@@ -1,0 +1,50 @@
+import React from 'react'
+
+import {
+  PaddingContainer, 
+  Heading, 
+  BlueText
+} from '../styles/Global.styled'
+import project1 from '../assets/SakugaConnectorThumbnail.png'
+import project2 from '../assets/TurnTablesThumbnail.png'
+
+
+const projectDetails = [
+
+  {
+    id: 0,
+    project_name: "SakugaConnector",
+    project_desc: "Anime discussion and recommendation platform",
+    tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
+    project_img: {project1},
+    project_url: '',
+    reverse: false
+
+  },
+  {
+    id: 1,
+    project_name: "TurnTables",
+    project_desc: "Music Review and tracking app",
+    tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
+    project_img: {project1},
+    project_url: '',
+    reverse: false
+
+  },
+]
+
+
+const MyProjects = () => {
+  return <PaddingContainer id='Projects' top='5%' bottom='5%'>
+    <Heading as='h4' size='h4'>
+      My Projects
+    </Heading>
+
+    <Heading as='h2' size='h2'>
+      What <BlueText>I have built</BlueText>
+    </Heading>
+
+  </PaddingContainer>
+}
+
+export default MyProjects
