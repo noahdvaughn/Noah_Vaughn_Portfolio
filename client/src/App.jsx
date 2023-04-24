@@ -17,6 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={Theme}>
       <MainBody>
+      <Navbar/>
         <Container>
           <Showcase />
           <MySkills />
