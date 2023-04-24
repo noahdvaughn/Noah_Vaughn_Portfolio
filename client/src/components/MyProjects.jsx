@@ -19,7 +19,7 @@ const projectDetails = [
     project_name: "SakugaConnector",
     project_desc: "Anime discussion and recommendation platform",
     tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
-    project_img: {project1},
+    project_img: project1,
     project_url: 'https://sakugaconnector.surge.sh/',
     reverse: false
 
@@ -29,7 +29,7 @@ const projectDetails = [
     project_name: "TurnTables",
     project_desc: "Music Review and tracking app",
     tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
-    project_img: {project1},
+    project_img: project2,
     project_url: 'https://github.com/jonclindner/TurnTables',
     reverse: false
 
@@ -48,8 +48,8 @@ const MyProjects = () => {
     </Heading>
 
     {projectDetails.map((project)=>(
-      <PaddingContainer top='5rem' bottom='5rem'>
-        <Project />
+      <PaddingContainer key={project.id}top='5rem' bottom='5rem'>
+        <Project data={project}/>
       </PaddingContainer>
     ))}
 
