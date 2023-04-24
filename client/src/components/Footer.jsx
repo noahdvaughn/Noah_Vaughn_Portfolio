@@ -39,6 +39,10 @@ const Footer = () => {
             as='textarea' />
 
           </PaddingContainer>
+          <FlexContainer>
+            <Button>Send Message</Button>
+          </FlexContainer>
+
         </ContactForm>
       </FlexContainer>
 
