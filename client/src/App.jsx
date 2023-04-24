@@ -7,6 +7,7 @@ import Showcase from './components/Showcase'
 import MySkills from './components/MySkills'
 import MyProjects from './components/MyProjects'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 
 
