@@ -6,7 +6,7 @@ import {
   FlexContainer,
   Button
 } from '../styles/Global.styled'
-
+import { ContactForm, FormInput, FormLabel } from '../styles/Footer.styled'
 
 const Footer = () => {
   return (
@@ -19,7 +19,27 @@ const Footer = () => {
       </Heading>
       <PaddingContainer top='3rem'>
       <FlexContainer justify='center'>
-        <ContactForm></ContactForm>
+        <ContactForm>
+          <PaddingContainer bottom='2rem'>
+            <FormLabel>Name:</FormLabel>
+            <FormInput type='text'
+            placeholder='Enter your name' />
+
+          </PaddingContainer>
+          <PaddingContainer bottom='2rem'>
+            <FormLabel>Email:</FormLabel>
+            <FormInput type='text'
+            placeholder='Enter your Email' />
+
+          </PaddingContainer>
+          <PaddingContainer bottom='2rem'>
+            <FormLabel>Message:</FormLabel>
+            <FormInput type='text'
+            placeholder='Enter your Message'
+            as='textarea' />
+
+          </PaddingContainer>
+        </ContactForm>
       </FlexContainer>
 
       </PaddingContainer>
