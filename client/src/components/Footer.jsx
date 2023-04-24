@@ -39,7 +39,8 @@ const Footer = () => {
             as='textarea' />
 
           </PaddingContainer>
-          <FlexContainer>
+
+          <FlexContainer justify='center'>
             <Button>Send Message</Button>
           </FlexContainer>
 
