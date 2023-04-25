@@ -11,6 +11,8 @@ import { NavbarContainer, Logo, MenuIcon  } from '../styles/Navbar.styled'
 
 import {GiHamburgerMenu} from 'react-icons/gi'
 import { Theme} from '../utils/Theme'
+import NavMenu from './layouts/NavMenu'
+
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -26,7 +28,7 @@ const Navbar = () => {
             </Logo>
 
             <MenuIcon onClick={()=>{
-              setOpenMenu(!openMenu)
+              setOpenMenu(true)
             }}>
               <GiHamburgerMenu/>
             </MenuIcon>
@@ -34,7 +36,7 @@ const Navbar = () => {
           </FlexContainer>
         </Container>
 
-        {openMenu && <NavMenu/>}
+        {openMenu && <NavMenu setOpenMenu={setOpenMenu}/>}
         </PaddingContainer>
     </NavbarContainer>
   )
