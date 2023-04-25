@@ -11,7 +11,6 @@ import { ContactForm, FormInput, FormLabel } from '../styles/Footer.styled'
 const Footer = () => {
   return (
     <PaddingContainer id='Contact' top='5%' bottom='5%'>
-      <Heading as='h4' size='h4' align='center'>My Contact</Heading>
 
       <Heading as='h2' size='h2' align='center' top='0.5rem'
       >

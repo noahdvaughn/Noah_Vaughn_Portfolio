@@ -2,6 +2,8 @@ import React from 'react'
 import profilePic from '../assets/pfp2.png'
 import BackgroundImg from '../assets/particle.png'
 
+import { motion} from 'framer-motion'
+
 import {
   PaddingContainer,
   FlexContainer,
@@ -16,15 +18,14 @@ import {BsLinkedin, BsGithub} from "react-icons/bs"
 
 const Showcase = () => {
   return (
-    <PaddingContainer id="Home" left="3%" right="10%" top="15%" bottom="10%">
-      <FlexContainer align="center" fullWidthChild>
-        <div>
-          <Heading size="h4" as='h4'>Hello!</Heading>
+    <PaddingContainer id="Home" left="3%" right="10%" top="15%" bottom="10%" resLeft='1rem' resRight='1rem' resTop='5rem'>
+      <FlexContainer align="center" fullWidthChild resTextAlign='center'>
+        <motion.div>
 
           <Heading as='h1' size='h1'
           top='0.5rem'
           bottom='1rem'>
-            I'm <BlueText>
+            Hello! I'm <BlueText>
             Noah Vaughn
             </BlueText>
           </Heading>
@@ -36,7 +37,7 @@ const Showcase = () => {
          Hello, my name is Noah Vaughn and I'm a fullstack developer who creates intuitive solutions to modern problems.
           </ParaText>
 
-          <FlexContainer gap='20px'>
+          <FlexContainer gap='20px' responsiveFlex resJustify='center'>
 
             <IconContainer color='blue' size ='1.5rem'>
               <BsLinkedin/>
@@ -47,10 +48,10 @@ const Showcase = () => {
             </IconContainer>
 
           </FlexContainer>
-        </div>
+        </motion.div>
 
 
-        <FlexContainer justify='flex-end'>
+        <FlexContainer justify='flex-end' responsiveFlex resJustify='center'>
           <ShowcaseParticleContainer>
             <ShowcaseImageCard>
               <img src={profilePic}/>

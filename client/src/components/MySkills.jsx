@@ -38,7 +38,7 @@ const MySkills = () => {
   return (
     <PaddingContainer id='Skills' top='10%' bottom='10%'>
 
-      <FlexContainer fullWidthChild>
+      <FlexContainer fullWidthChild responsiveFlex responsiveDirection='column-reverse'>
 
       
 
@@ -60,10 +60,10 @@ const MySkills = () => {
 
       <div>
         <Heading as='h3'>
-          Skills
+          My Skills:
         </Heading>
         <Heading as='h2' size='h2' top='0.5rem'>
-          What <BlueText>I can do</BlueText>
+          This is <BlueText>My Jam</BlueText>
         </Heading>
 
         <ParaText top='2rem' bottom='1.5rem'>

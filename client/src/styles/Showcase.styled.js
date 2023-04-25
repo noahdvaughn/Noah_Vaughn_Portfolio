@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const ShowcaseParticleContainer = styled.div`
   position: relative;
 `
+// @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+//   display: none;
+// }
 export const ShowcaseImageCard = styled.div`
   border: 1px solid white;
   width: max-content;
@@ -20,4 +23,8 @@ export const Particle = styled.img`
   right: ${({ right }) => right};
   bottom: ${({ bottom }) => bottom};
   transform: rotate(${({ rotate }) => rotate});
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `

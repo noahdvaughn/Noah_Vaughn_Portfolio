@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 html{
   overflow-x: hidden;
@@ -13,5 +15,15 @@ img{
   border-radius: 1rem;
   margin: 0;
   padding: 0;
+  
+}
+@media(max-width: 900px){
+  img{
+    max-width: 70vw;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
 }
 
