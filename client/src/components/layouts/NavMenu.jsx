@@ -5,6 +5,7 @@ import {
 
 import {AiOutlineClose} from 'react-icons/ai'
 import { MenuIcon, NavMenuContainer, MenuItem } from '../../styles/Navbar.styled'
+import { navLinks } from '../../utils/Data'
 
 const NavMenu = ({setOpenMenu}) => {
   return (
@@ -19,20 +20,16 @@ const NavMenu = ({setOpenMenu}) => {
         </FlexContainer>
       </PaddingContainer>
 
+
       <PaddingContainer top='8%'>
             <FlexContainer direction='column' align='center'>
-              <MenuItem href='#Home' onClick={()=> {
+
+              {navLinks.map((link)=>(
+
+              <MenuItem href={link.href} onClick={()=> {
                 setOpenMenu(false)
-              }}>Home</MenuItem>
-              <MenuItem href='#Skills' onClick={()=> {
-                setOpenMenu(false)
-              }}>My Skills</MenuItem>
-              <MenuItem href='#Projects' onClick={()=> {
-                setOpenMenu(false)
-              }}>My Projects</MenuItem>
-              <MenuItem href='#Contact' onClick={()=> {
-                setOpenMenu(false)
-              }}>Contact Me</MenuItem>
+              }}>{link.name}</MenuItem>
+              ))}
             </FlexContainer>
       </PaddingContainer>
     </NavMenuContainer>
