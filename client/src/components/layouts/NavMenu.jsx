@@ -21,7 +21,18 @@ const NavMenu = ({setOpenMenu}) => {
 
       <PaddingContainer top='8%'>
             <FlexContainer direction='column' align='center'>
-              <MenuItem href='#Home'>Home</MenuItem>
+              <MenuItem href='#Home' onClick={()=> {
+                setOpenMenu(false)
+              }}>Home</MenuItem>
+              <MenuItem href='#Skills' onClick={()=> {
+                setOpenMenu(false)
+              }}>My Skills</MenuItem>
+              <MenuItem href='#Projects' onClick={()=> {
+                setOpenMenu(false)
+              }}>My Projects</MenuItem>
+              <MenuItem href='#Contact' onClick={()=> {
+                setOpenMenu(false)
+              }}>Contact Me</MenuItem>
             </FlexContainer>
       </PaddingContainer>
     </NavMenuContainer>
