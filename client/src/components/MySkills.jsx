@@ -11,6 +11,9 @@ import {
 import {SkillsCardContainer, SkillsCard} from '../styles/MySkills.styled'
 import { FaReact, FaVuejs, FaNode, FaPython } from 'react-icons/fa'
 
+import { motion} from 'framer-motion'
+import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants'
+
 const Skills = [
   {
     id: 0,
@@ -42,7 +45,7 @@ const MySkills = () => {
 
       
 
-      <SkillsCardContainer>
+      <SkillsCardContainer as={motion.div} variants={fadeInLeftVariant} initial='hidden' whileInView='visible'>
       {Skills.map((skill)=>(
         <SkillsCard>
           <IconContainer size='5rem' color='blue'>
@@ -58,7 +61,7 @@ const MySkills = () => {
 
 
 
-      <div>
+      <motion.div variants={fadeInRightVariant} initial='hidden' whileInView='visible'>
         <Heading as='h3'>
           My Skills:
         </Heading>
@@ -74,7 +77,7 @@ const MySkills = () => {
           I have experience in using react for building scalable and maintainable applications.
         </ParaText>
 
-      </div>
+      </motion.div>
 
 
       </FlexContainer>

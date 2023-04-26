@@ -9,7 +9,8 @@ import project1 from '../assets/SakugaConnectorThumbnail.png'
 import project2 from '../assets/TurnTablesThumbnail.png'
 import Project from './layouts/Project'
 
-
+import { motion} from 'framer-motion'
+import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from '../utils/Variants'
 
 
 const projectDetails = [
@@ -31,7 +32,7 @@ const projectDetails = [
     tech_stack: ['React', 'Node', 'Express', 'Sequelize', 'PostgreSQL'],
     project_img: project2,
     project_url: 'https://github.com/jonclindner/TurnTables',
-    reverse: false
+    reverse: true
 
   },
 ]
@@ -48,7 +49,7 @@ const MyProjects = () => {
     </Heading>
 
     {projectDetails.map((project)=>(
-      <PaddingContainer key={project.id}top='5rem' bottom='5rem'>
+      <PaddingContainer key={project.id}top='5rem' bottom='5rem' >
         <Project data={project}/>
       </PaddingContainer>
     ))}

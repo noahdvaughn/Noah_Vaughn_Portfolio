@@ -7,10 +7,12 @@ import {
   Button
 } from '../styles/Global.styled'
 import { ContactForm, FormInput, FormLabel } from '../styles/Footer.styled'
+import { motion} from 'framer-motion'
+import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant, fadeInBottomVariant } from '../utils/Variants'
 
 const Footer = () => {
   return (
-    <PaddingContainer id='Contact' top='5%' bottom='5%'>
+    <PaddingContainer id='Contact' top='5%' bottom='5%' as={motion.div} variants={fadeInBottomVariant} initial='hidden' whileInView='visible'>
 
       <Heading as='h2' size='h2' align='center' top='0.5rem'
       >

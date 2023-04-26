@@ -2,7 +2,6 @@ import React from 'react'
 import profilePic from '../assets/pfp2.png'
 import BackgroundImg from '../assets/particle.png'
 
-import { motion} from 'framer-motion'
 
 import {
   PaddingContainer,
@@ -16,11 +15,14 @@ import { ShowcaseParticleContainer, ShowcaseImageCard, Particle } from '../style
 
 import {BsLinkedin, BsGithub} from "react-icons/bs"
 
+import { motion} from 'framer-motion'
+import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants'
+
 const Showcase = () => {
   return (
     <PaddingContainer id="Home" left="3%" right="10%" top="15%" bottom="10%" resLeft='1rem' resRight='1rem' resTop='5rem'>
       <FlexContainer align="center" fullWidthChild resTextAlign='center'>
-        <motion.div initial={{x: -50, opacity:0}} whileInView={{x:0, opacity:1}} transition={{type: 'tween', duration: 1}}>
+        <motion.div variants={fadeInLeftVariant} initial='hidden' whileInView='visible'>
 
           <Heading as='h1' size='h1'
           top='0.5rem'
@@ -51,7 +53,7 @@ const Showcase = () => {
         </motion.div>
 
 
-        <FlexContainer justify='flex-end' responsiveFlex resJustify='center'>
+        <FlexContainer justify='flex-end' responsiveFlex resJustify='center' as={motion.div} variants={fadeInRightVariant} initial='hidden' whileInView='visible'>
           <ShowcaseParticleContainer>
             <ShowcaseImageCard>
               <img src={profilePic}/>

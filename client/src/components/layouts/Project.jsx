@@ -9,17 +9,17 @@ import {
 } from '../../styles/Global.styled'
 import { FaGithub } from 'react-icons/fa'
 import { TechStackCard, ProjectImageContainer, ProjectImage } from '../../styles/MyProjects.styled'
-// import project1 from '../../assets/SakugaConnectorThumbnail.png'
-// import project2 from '../../assets/TurnTablesThumbnail.png'
+import { motion} from 'framer-motion'
+import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from '../../utils/Variants'
 
 
 const Project = ({data}) => {
 
   
   return (
-    <FlexContainer fullWidthChild >
+    <FlexContainer fullWidthChild  direction={data.reverse ? 'row-reverse' : false}>
 
-      <div>
+      <motion.div variants={data.reverse ? fadeInRightVariant : fadeInLeftVariant} initial='hidden' whileInView='visible'>
           <FlexContainer align='center' gap='1rem' >
             <Heading as='h3' size='h3' bottom='1rem'>
               {data.project_name}
@@ -40,12 +40,10 @@ const Project = ({data}) => {
           </PaddingContainer>
           <ParaText top='1.5rem' bottom='0.5rem'>{data.project_desc}</ParaText>
           <Button>Visit Website</Button>
+      </motion.div>
 
 
-      </div>
-
-
-      <ProjectImageContainer justify='flex-end'  >
+      <ProjectImageContainer justify={data.reverse ? 'flex-start' : 'flex-end'}  as={motion.div} variants={data.reverse ?  fadeInLeftVariant : fadeInRightVariant } initial='hidden' whileInView='visible'>
           <ProjectImage src={data.project_img} alt={data.project_name}/>
       </ProjectImageContainer>
     </FlexContainer>
