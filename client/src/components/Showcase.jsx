@@ -20,7 +20,7 @@ const Showcase = () => {
   return (
     <PaddingContainer id="Home" left="3%" right="10%" top="15%" bottom="10%" resLeft='1rem' resRight='1rem' resTop='5rem'>
       <FlexContainer align="center" fullWidthChild resTextAlign='center'>
-        <motion.div>
+        <motion.div initial={{x: -50, opacity:0}} whileInView={{x:0, opacity:1}} transition={{type: 'tween', duration: 1}}>
 
           <Heading as='h1' size='h1'
           top='0.5rem'
