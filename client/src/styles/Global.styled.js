@@ -80,7 +80,7 @@ export const BlueText = styled.span`
 export const ParaText = styled(PaddingContainer)`
   color: ${({ theme }) => theme.colors.para_text_color};
 `
-export const IconContainer = styled.div`
+export const IconContainer = styled.a`
   font-size: ${({ size }) => size};
   cursor: pointer;
   color: ${({ color, theme }) => {

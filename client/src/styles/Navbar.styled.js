@@ -9,10 +9,11 @@ export const NavbarContainer = styled.div`
   transition: all 0.3s ease-in;
   background-color: ${({ bgColor }) => bgColor};
 `
-export const Logo = styled.p`
+export const Logo = styled.a`
   font-size: 1.7rem;
   font-weight: ${({ theme }) => theme.fonts.weight.medium};
   color: white;
+  text-decoration: none;
 `
 export const MenuIcon = styled.a`
   color: ${({ theme }) => theme.colors.secondary};

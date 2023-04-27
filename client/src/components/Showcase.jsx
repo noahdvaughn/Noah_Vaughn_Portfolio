@@ -1,4 +1,5 @@
 import React from 'react'
+import {useRef} from 'react'
 import profilePic from '../assets/pfp2.png'
 import BackgroundImg from '../assets/particle.png'
 
@@ -19,6 +20,7 @@ import { motion} from 'framer-motion'
 import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants'
 
 const Showcase = () => {
+  const constraintsRef = useRef(null)
   return (
     <PaddingContainer id="Home" left="3%" right="10%" top="15%" bottom="10%" resLeft='1rem' resRight='1rem' resTop='5rem'>
       <FlexContainer align="center" fullWidthChild resTextAlign='center'>
@@ -41,11 +43,22 @@ const Showcase = () => {
 
           <FlexContainer gap='20px' responsiveFlex resJustify='center'>
 
-            <IconContainer color='blue' size ='1.5rem'>
+            <IconContainer color='blue' size ='3.5rem' href='https://www.linkedin.com/in/noahvaughn/'
+            as={motion.a} 
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={e => {}}
+            onHoverEnd={e => {}}
+            transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            >
               <BsLinkedin/>
             </IconContainer>
 
-            <IconContainer color='blue' size ='1.5rem'>
+            <IconContainer color='blue' size ='3.5rem' href='https://github.com/noahdvaughn' 
+              as={motion.a} 
+              whileHover={{ scale: 1.05 }}
+              onHoverStart={e => {}}
+              onHoverEnd={e => {}}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}>
               <BsGithub/>
             </IconContainer>
 
@@ -55,27 +68,17 @@ const Showcase = () => {
 
         <FlexContainer justify='flex-end' responsiveFlex resJustify='center' as={motion.div} variants={fadeInRightVariant} initial='hidden' whileInView='visible'>
           <ShowcaseParticleContainer>
-            <ShowcaseImageCard>
-              <img src={profilePic}/>
+            <ShowcaseImageCard 
+              as={motion.div} 
+              whileHover={{ scale: 1.05 }}
+              onHoverStart={e => {}}
+              onHoverEnd={e => {}}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
+              whileTap={{ scale: 1 }}
+              >
+                
+                <img src={profilePic}/>
             </ShowcaseImageCard>
-            <Particle
-            src={BackgroundImg}
-            top='-80px'
-            left='20px'
-            rotate='60deg'
-            />
-            <Particle
-            src={BackgroundImg}
-            top='50px'
-            right='-70px'
-            rotate='0deg'
-            />
-            <Particle
-            src={BackgroundImg}
-            bottom='10px'
-            left='-70px'
-            rotate='50deg'
-            />
           </ShowcaseParticleContainer>
 
         </FlexContainer>

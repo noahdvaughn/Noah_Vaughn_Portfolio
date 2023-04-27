@@ -12,13 +12,13 @@ import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant, fadeInBottomVa
 
 const Footer = () => {
   return (
-    <PaddingContainer id='Contact' top='5%' bottom='5%' as={motion.div} variants={fadeInBottomVariant} initial='hidden' whileInView='visible'>
+    <PaddingContainer id='Contact' top='5%' bottom='5%' >
 
       <Heading as='h2' size='h2' align='center' top='0.5rem'
       >
-        Contact <BlueText>Me here </BlueText>
+        Hit me up <BlueText>Below </BlueText>
       </Heading>
-      <PaddingContainer top='3rem'>
+      <PaddingContainer top='3rem' as={motion.div} variants={fadeInBottomVariant} initial='hidden' whileInView='visible'>
       <FlexContainer justify='center'>
         <ContactForm>
           <PaddingContainer bottom='2rem'>

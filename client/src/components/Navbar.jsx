@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 
 import {
   FlexContainer,
@@ -29,12 +30,12 @@ const Navbar = () => {
   }, [])
 
   return (
-    <NavbarContainer bgColor={sticky ? Theme.colors.primary : 'transparent'}>
+    <NavbarContainer bgColor={ Theme.colors.primary}>
         <PaddingContainer top='1.2rem' bottom='1.2rem' resRight='1rem' resLeft='1rem'>
         <Container>
-          <FlexContainer justify='space-between' responsiveFlex>
+          <FlexContainer justify='space-between' responsiveFlex href='Home'>
 
-            <Logo>
+            <Logo href='#Home'>
               Noah Vaughn 
               {/* <BlueText>Fullstack Developer</BlueText> */}
             </Logo>

@@ -17,6 +17,9 @@ img{
   padding: 0;
   
 }
+
+
+
 @media(max-width: 900px){
   img{
     max-width: 70vw;
