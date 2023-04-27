@@ -11,6 +11,7 @@ import { FaGithub } from 'react-icons/fa'
 import { TechStackCard, ProjectImageContainer, ProjectImage } from '../../styles/MyProjects.styled'
 import { motion} from 'framer-motion'
 import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from '../../utils/Variants'
+import { Tilt } from 'react-tilt'
 
 
 const Project = ({data}) => {
@@ -44,7 +45,10 @@ const Project = ({data}) => {
 
 
       <ProjectImageContainer justify={data.reverse ? 'flex-start' : 'flex-end'}  as={motion.div} variants={data.reverse ?  fadeInLeftVariant : fadeInRightVariant } initial='hidden' whileInView='visible'>
+        <Tilt options={{max: 35, scale: 1, speed: 1000, reverse: true}}>
           <ProjectImage src={data.project_img} alt={data.project_name}/>
+
+        </Tilt>
       </ProjectImageContainer>
     </FlexContainer>
   )

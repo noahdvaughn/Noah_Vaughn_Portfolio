@@ -7,7 +7,7 @@ export const ShowcaseParticleContainer = styled.div`
 //   display: none;
 // }
 export const ShowcaseImageCard = styled.div`
-  border: 1px solid white;
+  border: 2px solid ${({ theme }) => theme.colors.secondary};
   width: max-content;
   padding-top: 1rem;
   padding-right: 1rem;

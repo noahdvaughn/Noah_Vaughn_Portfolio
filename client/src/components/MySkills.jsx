@@ -13,6 +13,7 @@ import { FaReact, FaVuejs, FaNode, FaPython } from 'react-icons/fa'
 
 import { motion} from 'framer-motion'
 import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants'
+import { Tilt } from 'react-tilt'
 
 const Skills = [
   {
@@ -47,6 +48,7 @@ const MySkills = () => {
 
       <SkillsCardContainer as={motion.div} variants={fadeInLeftVariant} initial='hidden' whileInView='visible'>
       {Skills.map((skill)=>(
+        <Tilt options={{max: 35, scale: 1, speed: 1000, reverse: true}}>
         <SkillsCard>
           <IconContainer size='5rem' color='blue'>
             {skill.icon}
@@ -56,6 +58,8 @@ const MySkills = () => {
           {skill.tech}
           </Heading>
         </SkillsCard>
+
+        </Tilt>
       ))}
       </SkillsCardContainer>
 
