@@ -14,11 +14,17 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import { Theme} from '../utils/Theme'
 import NavMenu from './layouts/NavMenu'
 import { motion, AnimatePresence } from 'framer-motion'
+import Resume from './layouts/Resume'
 
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false)
   const [sticky, setSticky] = useState(false)
+  const [viewingResume, setViewingResume] = useState(false)
+
+  const toggleViewingResume =() => {
+    setViewingResume(!viewingResume)
+  }
 
   useEffect(() => {
     const onScroll = () => {
@@ -49,9 +55,10 @@ const Navbar = () => {
             <Logo href='#Contact'>
               Contact
             </Logo>
-            <Logo href='https://docs.google.com/document/d/e/2PACX-1vTnTOEBqaqHdB7sJxCVdL3WAZt214PXYcAWpx8uSVQxBK1i30dLqzkurlSHRPrAhErQisG-6ABJzwIh/pub'>
-              Resume
+            <Logo onClick={toggleViewingResume}>
+              Resume 
             </Logo>
+            {/* href='https://docs.google.com/document/d/e/2PACX-1vTnTOEBqaqHdB7sJxCVdL3WAZt214PXYcAWpx8uSVQxBK1i30dLqzkurlSHRPrAhErQisG-6ABJzwIh/pub' */}
 
             <MenuIcon as={motion.a} whileHover={{scale: 1.2}} onClick={()=>{
               setOpenMenu(true)
@@ -64,7 +71,7 @@ const Navbar = () => {
 
             <AnimatePresence>
         {openMenu && <NavMenu setOpenMenu={setOpenMenu}/>}
-
+        {viewingResume && <Resume/>}
             </AnimatePresence>
         </PaddingContainer>
     </NavbarContainer>

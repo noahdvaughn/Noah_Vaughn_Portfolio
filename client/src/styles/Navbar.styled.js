@@ -13,6 +13,7 @@ export const Logo = styled.a`
   font-size: 1.7rem;
   font-weight: ${({ theme }) => theme.fonts.weight.medium};
   color: ${({ theme }) => theme.colors.secondary};
+  cursor: pointer;
 
   text-decoration: none;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
@@ -47,4 +48,16 @@ export const MenuItem = styled.a`
   margin-top: 3rem;
   cursor: pointer;
   text-decoration: none;
+`
+export const ResumeDiv = styled.div`
+  text-align: center;
+
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
