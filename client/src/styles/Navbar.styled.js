@@ -12,6 +12,15 @@ export const NavbarContainer = styled.div`
 export const Logo = styled.a`
   font-size: 1.7rem;
   font-weight: ${({ theme }) => theme.fonts.weight.medium};
+  color: ${({ theme }) => theme.colors.secondary};
+
+  text-decoration: none;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+`
+export const MainLogo = styled.a`
+  font-size: 1.7rem;
+  font-weight: ${({ theme }) => theme.fonts.weight.medium};
   color: white;
   text-decoration: none;
 `

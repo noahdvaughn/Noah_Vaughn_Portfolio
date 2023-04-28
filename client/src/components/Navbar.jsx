@@ -8,7 +8,7 @@ import {
   BlueText
 } from '../styles/Global.styled'
 
-import { NavbarContainer, Logo, MenuIcon  } from '../styles/Navbar.styled'
+import { NavbarContainer, Logo, MenuIcon, MainLogo  } from '../styles/Navbar.styled'
 
 import {GiHamburgerMenu} from 'react-icons/gi'
 import { Theme} from '../utils/Theme'
@@ -35,9 +35,22 @@ const Navbar = () => {
         <Container>
           <FlexContainer justify='space-between' responsiveFlex href='Home'>
 
-            <Logo href='#Home'>
+            <MainLogo href='#Home'>
               Noah Vaughn 
               {/* <BlueText>Fullstack Developer</BlueText> */}
+            </MainLogo>
+
+            <Logo href='#Skills'>
+              Skills
+            </Logo>
+            <Logo href='#Projects'>
+              Projects
+            </Logo>
+            <Logo href='#Contact'>
+              Contact
+            </Logo>
+            <Logo href='https://docs.google.com/document/d/e/2PACX-1vTnTOEBqaqHdB7sJxCVdL3WAZt214PXYcAWpx8uSVQxBK1i30dLqzkurlSHRPrAhErQisG-6ABJzwIh/pub'>
+              Resume
             </Logo>
 
             <MenuIcon as={motion.a} whileHover={{scale: 1.2}} onClick={()=>{
