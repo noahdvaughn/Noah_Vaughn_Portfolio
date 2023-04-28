@@ -7,6 +7,9 @@ export const Container = styled.div`
   width: 90%;
   max-width: 1280px;
   margin: auto;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    overflow: hidden;
+  }
 `
 
 export const PaddingContainer = styled.div`
@@ -35,6 +38,7 @@ export const FlexContainer = styled.div`
     display: ${({ responsiveFlex }) => (responsiveFlex ? 'flex' : 'block')};
     justify-content: ${({ resJustify }) => resJustify};
     text-align: ${({ resTextAlign }) => resTextAlign};
+    justify-items: ${({ resJustifyItems }) => resJustifyItems};
 
     flex-direction: ${({ responsiveDirection }) => responsiveDirection};
   }
@@ -104,6 +108,7 @@ export const Button = styled.a`
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3 ease;
+  margin-bottom: 10px;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary_light};

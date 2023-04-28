@@ -40,13 +40,19 @@ const Project = ({data}) => {
 
           </PaddingContainer>
           <ParaText top='1.5rem' bottom='0.5rem'>{data.project_desc}</ParaText>
+          <FlexContainer resJustify='center' responsiveFlex>
           <Button>Visit Website</Button>
+
+          </FlexContainer>
       </motion.div>
 
 
-      <ProjectImageContainer justify={data.reverse ? 'flex-start' : 'flex-end'}  as={motion.div} variants={data.reverse ?  fadeInLeftVariant : fadeInRightVariant } initial='hidden' whileInView='visible'>
-        <Tilt options={{max: 35, scale: 1, speed: 1000, reverse: true}}>
+      <ProjectImageContainer justify={data.reverse ? 'flex-start' : 'flex-end'}  as={motion.div} variants={data.reverse ?  fadeInLeftVariant : fadeInRightVariant } initial='hidden' whileInView='visible' >
+        <Tilt options={{max: 35, scale: 1, speed: 1000, reverse: true}} >
+          <FlexContainer as={motion.div} transition={{ type: "spring", stiffness: 500, damping: 15 }}
+        whileTap={{ scale: 0.9 }} resJustify='center' responsiveFlex>
           <ProjectImage src={data.project_img} alt={data.project_name}/>
+          </FlexContainer>
 
         </Tilt>
       </ProjectImageContainer>

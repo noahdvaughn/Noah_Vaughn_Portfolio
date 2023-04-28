@@ -48,8 +48,9 @@ const MySkills = () => {
 
       <SkillsCardContainer as={motion.div} variants={fadeInLeftVariant} initial='hidden' whileInView='visible'>
       {Skills.map((skill)=>(
-        <Tilt options={{max: 35, scale: 1, speed: 1000, reverse: true}}>
-        <SkillsCard>
+        <Tilt options={{max: 35, scale: 1, speed: 1000, reverse: true}} >
+        <SkillsCard as={motion.div} transition={{ type: "spring", stiffness: 500, damping: 15 }}
+        whileTap={{ scale: 0.9 }}>
           <IconContainer size='5rem' color='blue'>
             {skill.icon}
           </IconContainer>

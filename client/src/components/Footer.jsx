@@ -19,7 +19,7 @@ const Footer = () => {
         Hit me up <BlueText>Below </BlueText>
       </Heading>
       <PaddingContainer top='3rem' as={motion.div} variants={fadeInBottomVariant} initial='hidden' whileInView='visible'>
-      <FlexContainer justify='center'>
+      <FlexContainer justify='center' resJustifyItems='center' responsiveFlex>
         <ContactForm>
           <PaddingContainer bottom='2rem'>
             <FormLabel>Name:</FormLabel>

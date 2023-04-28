@@ -10,6 +10,9 @@ export const TechStackCard = styled.div`
 export const ProjectImageContainer = styled.div`
   display: flex;
   justify-content: ${({ justify }) => justify};
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    justify-content: center;
+  }
 `
 
 export const ProjectImage = styled.img`
