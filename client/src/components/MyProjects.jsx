@@ -10,10 +10,6 @@ import project2 from '../assets/TurnTablesThumbnail.png'
 import project3 from '../assets/OpeningPage.png'
 import Project from './layouts/Project'
 
-import { motion} from 'framer-motion'
-import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant } from '../utils/Variants'
-import { Tilt } from 'react-tilt'
-
 
 const projectDetails = [
 

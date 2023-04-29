@@ -80,6 +80,7 @@ export const Heading = styled(PaddingContainer)`
 `
 export const BlueText = styled.span`
   color: ${({ theme }) => theme.colors.secondary};
+  text-decoration: ${({ textDecoration }) => textDecoration};
 `
 export const ParaText = styled(PaddingContainer)`
   color: ${({ theme }) => theme.colors.para_text_color};

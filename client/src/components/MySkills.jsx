@@ -9,7 +9,7 @@ import {
 } from '../styles/Global.styled'
 
 import {SkillsCardContainer, SkillsCard} from '../styles/MySkills.styled'
-import { FaReact, FaVuejs, FaNode, FaPython } from 'react-icons/fa'
+import { FaReact, FaVuejs, FaNode, FaPython, FaJs } from 'react-icons/fa'
 
 import { motion} from 'framer-motion'
 import { fadeInLeftVariant, fadeInRightVariant } from '../utils/Variants'
@@ -33,8 +33,8 @@ const Skills = [
   },
   {
     id: 3,
-    tech: 'Python',
-    icon: <FaPython />
+    tech: 'Javascript',
+    icon: <FaJs />
   }
 ]
 
@@ -59,11 +59,9 @@ const MySkills = () => {
           {skill.tech}
           </Heading>
         </SkillsCard>
-
         </Tilt>
       ))}
       </SkillsCardContainer>
-
 
 
       <motion.div variants={fadeInRightVariant} initial='hidden' whileInView='visible'>
@@ -75,11 +73,11 @@ const MySkills = () => {
         </Heading>
 
         <ParaText top='2rem' bottom='1.5rem'>
-          As a FullStack developer, I am skilled in Javascript frameworks and libraries such as React, Vue, and Node.
+          As a Frontend developer, I take pride in using React, Vue, HTMl and CSS to create beautiful user-facing design. I have experience with Vite and other React tools as well as SCSS to step up my styling game. 
         </ParaText>
 
         <ParaText>
-          I have experience in using react for building scalable and maintainable applications.
+          As a Backend developer, I have built scalable and efficient APIS with Node, Express, Python, and Flask. I'm skilled in managing databases like PostgreSQL and MongoDB as well as cloud databases like Atlas and Google Firebase. 
         </ParaText>
 
       </motion.div>

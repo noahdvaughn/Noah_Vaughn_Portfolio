@@ -26,7 +26,7 @@ const NavMenu = ({setOpenMenu}) => {
       <PaddingContainer top='8%'>
             <FlexContainer direction='column' align='center' responsiveFlex>
               {navLinks.map((link)=>(
-              <MenuItem href={link.href}  as={motion.a} whileHover={{scale: 1.2}} key={link.id} onClick={()=> {
+              <MenuItem href={link.href} target={link.target}  as={motion.a} whileHover={{scale: 1.2}} key={link.id} onClick={()=> {
                 setOpenMenu(false)
               }}>{link.name}</MenuItem>
               ))}

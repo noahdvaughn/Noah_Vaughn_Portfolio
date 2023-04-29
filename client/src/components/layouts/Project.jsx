@@ -41,7 +41,7 @@ const Project = ({data}) => {
           </PaddingContainer>
           <ParaText top='1.5rem' bottom='0.5rem'>{data.project_desc}</ParaText>
           <FlexContainer resJustify='center' responsiveFlex>
-          <Button>Visit Website</Button>
+          <Button as='a' href={data.project_url}>Visit Website</Button>
 
           </FlexContainer>
       </motion.div>

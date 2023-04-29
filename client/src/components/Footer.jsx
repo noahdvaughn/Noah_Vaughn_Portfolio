@@ -24,24 +24,33 @@ const Footer = () => {
           <PaddingContainer bottom='2rem'>
             <FormLabel>Name:</FormLabel>
             <FormInput type='text'
-            placeholder='Enter your name' />
+            placeholder='Enter your name'
+            as={motion.input}
+             transition={{ type: "spring", stiffness: 500, damping: 50 }}
+            whileTap={{ scale: 0.9 }}
+            />
 
           </PaddingContainer>
           <PaddingContainer bottom='2rem'>
             <FormLabel>Email:</FormLabel>
             <FormInput type='text'
-            placeholder='Enter your Email' />
+            placeholder='Enter your Email' as={motion.input} transition={{ type: "spring", stiffness: 500, damping: 50 }}
+            whileTap={{ scale: 0.9 }}/>
 
           </PaddingContainer>
-          <PaddingContainer bottom='2rem'>
+          <PaddingContainer bottom='2rem'
+          
+          >
             <FormLabel>Message:</FormLabel>
-            <FormInput type='text'
-            placeholder='Enter your Message'
-            as='textarea' />
+            <FormInput 
+            as={motion.textarea} transition={{ type: "spring", stiffness: 500, damping: 50 }}
+            whileTap={{ scale: 0.9 }}
+            type='text'
+            placeholder='Enter your Message'/>
 
           </PaddingContainer>
 
-          <FlexContainer justify='center'>
+          <FlexContainer >
             <Button>Send Message</Button>
           </FlexContainer>
 

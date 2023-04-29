@@ -35,10 +35,13 @@ const Showcase = () => {
           </Heading>
 
           <Heading size='h3'>
-            I'm a <BlueText>Fullstack Developer </BlueText>
+            I'm a <BlueText>Fullstack Developer, </BlueText>
+          </Heading>
+          <Heading size='h3'>
+          <BlueText textDecoration='underline'>Ready to work</BlueText>
           </Heading>
           <ParaText as='p' top='2rem' bottom='4rem'>
-         Hello, my name is Noah Vaughn and I'm a fullstack developer who creates intuitive solutions to modern problems.
+         Hello, my name is Noah Vaughn and I'm a fullstack developer who creates intuitive solutions to modern problems. I specialize in Javascript frameworks and libraries such as React, Vue, and Node. I have 5+ years experience customer service, detail-oriented workspaces and connection with stakeholders of all levels in the business. <BlueText>Leave a message below and get to know me!</BlueText> 
           </ParaText>
 
           <FlexContainer gap='20px' responsiveFlex resJustify='center'>
