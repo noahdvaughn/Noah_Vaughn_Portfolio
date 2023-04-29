@@ -21,11 +21,11 @@ const Project = ({data}) => {
     <FlexContainer fullWidthChild  direction={data.reverse ? 'row-reverse' : false}>
 
       <motion.div variants={data.reverse ? fadeInRightVariant : fadeInLeftVariant} initial='hidden' whileInView='visible'>
-          <FlexContainer align='center' gap='1rem' >
+          <FlexContainer align='center' gap='1rem'>
             <Heading as='h3' size='h3' bottom='1rem'>
               {data.project_name}
             </Heading>
-            <IconContainer color="blue" size='2rem'>
+            <IconContainer as='a' href={data.github_url} color="blue" size='2rem'>
               <FaGithub/>
             </IconContainer>
           </FlexContainer>
