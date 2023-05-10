@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import {
   PaddingContainer, 
   Heading,
@@ -12,18 +12,25 @@ import { fadeInLeftVariant, fadeInRightVariant, fadeInTopVariant, fadeInBottomVa
 import emailjs from '@emailjs/browser';
 
 const Footer = () => {
+  const [sent, setSent] = useState(false);
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_vqwicou', 'contact_form', form.current, 'YaivNhk7xkh_OPUlQ')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    // emailjs.sendForm('service_vqwicou', 'contact_form', form.current, 'YaivNhk7xkh_OPUlQ')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+
+      form.current[0].value = ''
+      form.current[1].value = ''
+      form.current[2].value = ''
+      setSent(true)
+      console.log(sent)
     }
 
 
@@ -37,6 +44,7 @@ const Footer = () => {
       >
         Hit me up <BlueText>Below </BlueText>
       </Heading>
+      <Heading as='h2' size='h4' align='center' top='0.5rem'><BlueText>(727)-557-6615 | noahdvaughn@gmail.com</BlueText></Heading>
       <PaddingContainer top='3rem' as={motion.div} variants={fadeInBottomVariant} initial='hidden' whileInView='visible'>
       <FlexContainer justify='center' resJustifyItems='center' responsiveFlex>
 
@@ -75,9 +83,10 @@ const Footer = () => {
             placeholder='Enter your Message'/>
           </PaddingContainer>
 
-          <FlexContainer >
-            <Button onClick={sendEmail}>Send Message</Button>
-          </FlexContainer>
+            {sent === true ? 
+              <Heading as='h3' size='h3' align='center'> <BlueText>Message Sent!</BlueText></Heading> 
+            : <Button onClick={sendEmail}>Send Message</Button>}
+  
 
         </ContactForm>
       </FlexContainer>
